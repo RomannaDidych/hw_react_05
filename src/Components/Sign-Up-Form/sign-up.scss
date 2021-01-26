@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+$text-color: #fff;
+$bg-color: #000;
+$main-font: 'Roboto', sans-serif;
+$btn_color: #99ddff;
+$btn_hover_color: #0099e6;
+$inp_border_color: #cccccc;
+$bg_icon: #ff80bf;
+
+.container{
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $bg-color;
+	font-family: $main-font;
+	&__text{
+		margin-bottom: 40px;		
+		align-self: flex-end;		
+		font-size: 12px;
+		font-weight: 300;
+		letter-spacing: 1px;
+		color: $btn_color;		
+	}
+	&__footer{
+		color: $inp_border_color;
+		font-size: 12px;
+		font-weight: 300;
+	}
+}
+
+.icon{
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $bg_icon;
+	border-radius: 50%;
+	&__img{
+		width: 20px;
+		height: 20px;
+	}
+}
+
+.form{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	color: $text-color;
+	&__title{
+		font-size: 20px;
+		font-weight: 500;		
+		text-align: center;
+	}
+	&__name{
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		& input{
+			width: 42%;
+		}
+	}
+	& input{		
+		padding: 10px;
+		color: $text-color;
+		background-color: $bg-color;
+		border: .1px solid $inp_border_color;
+		margin-bottom: 15px;
+	}
+	&__checkbox	{
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;		
+	}
+	&__inp{
+		width: 30px;
+		height: 30px;
+		align-self: flex-end;		
+	}
+	&__label{
+		margin-left: 15px;
+		text-align: left;
+		font-size: 14px;		
+		color: $text-color;
+	}
+	&__btn{
+		width: 100%;
+		padding: 10px 0;
+		margin-bottom: 30px;
+		background-color: $btn_color;
+		border: 1px solid $btn_color;
+		border-radius: 5px;
+		font-size: 12px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		color: $bg-color;
+		&:hover{
+			background-color: $btn_hover_color;
+			border: 1px solid $btn_hover_color;
+		}
+	}
+}

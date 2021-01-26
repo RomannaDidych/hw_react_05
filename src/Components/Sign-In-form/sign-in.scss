@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+$text-color: #fff;
+$bg-color: #000;
+$main-font: 'Roboto', sans-serif;
+$btn_color: #99ddff;
+$btn_hover_color: #0099e6;
+$inp_border_color: #cccccc;
+$bg_icon: #ff80bf;
+
+.container{
+	&__textarea{
+		margin-bottom: 40px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;		
+		font-size: 12px;
+		font-weight: 300;
+		letter-spacing: 1px;
+		color: $btn_color;
+	}
+	&__link{
+		color: $btn_color;
+	}
+}
+.form__short{
+	padding-bottom: 8px;
+}
