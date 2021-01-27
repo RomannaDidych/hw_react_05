@@ -22,6 +22,7 @@ class Signinform extends Component {
         receiveInf: false,
       };
     }
+    console.log (data);
     return data;
   };
 
@@ -38,8 +39,10 @@ class Signinform extends Component {
     e.target.elements.password.value = "";
   };
 
-  getPasseord = () => {
-    return this.state.rememberPassword === true ? this.state.password : "";
+  getPassword = () => {
+    const password = this.state.rememberPassword === true ? this.state.password : "";
+    console.log(password);
+    return password;
   };
 
   render() {
@@ -55,12 +58,14 @@ class Signinform extends Component {
             type="email"
             name="male"
             placeholder="Email Address *"
+            defaultValue={this.state.male}
           />
           <input
             className="form__password"
             type="password"
             name="password"
             placeholder="Password *"
+            defaultValue={this.getPassword()}
           />
           <div className="form__checkbox">
             <input
@@ -68,6 +73,7 @@ class Signinform extends Component {
               id="check"
               type="checkbox"
               name="rememberPassword"
+              checked={this.state.rememberPassword}
             />
             <label className="form__label" htmlFor="check">
               <p className="form__short">Remember me</p>
